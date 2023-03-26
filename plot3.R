@@ -11,7 +11,7 @@ if(!file.exists("household_power_consumption.txt"))
   unzip(file)
 }
 #Loading the file
-worktable <- read.table("household_power_consumption.txt", header = TRUE, sep = ";")
+worktable <- read.table("household_power_consumption.txt", na.strings = "?", header = TRUE, sep = ";")
 
 
 #Convert to DateTime using as.POSIXct pasting the date and time together.
